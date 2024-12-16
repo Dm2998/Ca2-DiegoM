@@ -253,14 +253,20 @@
             <div class="row align-items-center">
                 <!-- About Image -->
                 <div class="col-md-5 mb-4 mb-md-0 pitem item-w1 item-h1 position-relative">
+                    <!-- Check if image path is correct -->
                     <a href="Ca2-DAM/images/DAM.jpg" class="image-popup">
-                        <img src="Ca2-DAM/images/DAM.jpg" class="img-fluid rounded shadow" alt="About Me">
+                        <!-- Image placeholder if DAM.jpg not found -->
+                        <img src="Ca2-DAM/images/DAM.jpg" 
+                             class="img-fluid rounded shadow" 
+                             alt="About Me" 
+                             onerror="this.onerror=null; this.src='https://via.placeholder.com/500x500?text=Image+Not+Found';">
                         <!-- Overlay -->
                         <div class="image-overlay position-absolute w-100 h-100 top-0 start-0 d-flex justify-content-center align-items-center">
                             <i class="fa fa-picture-o fa-2x text-white"></i>
                         </div>
                     </a>
                 </div>
+    
                 <!-- About Content -->
                 <div class="col-md-7">
                     <h2 class="text-center mb-4">About Me</h2>
@@ -277,16 +283,17 @@
                         <p class="mb-4">
                             By leading with integrity, encouraging innovation, and maintaining resilience, I remain committed to making a meaningful impact and driving shared success, even in the face of challenges.
                         </p>
-                    <!-- Download Button -->
-                    <a 
-                        href="Ca2-DAM/files/Diego-Medina-July24.pdf" 
-                        download="Diego_Medina_CV" 
-                        class="btn btn-primary btn-lg text-uppercase mt-3">
-                        Download My CV
-                    </a>
+                        <!-- Download Button -->
+                        <a href="Ca2-DAM/files/Diego-Medina-July24.pdf" 
+                           download="Diego_Medina_CV" 
+                           class="btn btn-primary btn-lg text-uppercase mt-3">
+                            Download My CV
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
+
     
         <!-- Down Indicator -->
         <div class="down-indicator text-center position-relative mt-4">
