@@ -28,7 +28,7 @@
 }
 
 .parallax-window {
-    background: url('../Ca2-DAM/images/pc0.jpg') no-repeat center center fixed; /* Set the background image */
+    background: url('../images/pc0.jpg') no-repeat center center fixed; /* Set the background image */
     background-size: cover; /* Cover the entire window */
     position: relative; /* Position the content */
     overflow: hidden; /* Hide overflow content */
