@@ -7,6 +7,16 @@
     position: relative;
 }
 
+.container.text-center.text-white {
+    color: #000 !important; /* Force black text color for all children */
+}
+
+.container.text-center.text-white p,
+.container.text-center.text-white h2 {
+    color: #000 !important; /* Force black text for <p> and <h2> specifically */
+    text-shadow: none; /* Remove any text shadow */
+}
+
 
 .promo-banner {                                 
     position: relative;

@@ -1,5 +1,8 @@
 /* Education */
 
+
+
+
 .overlay-text {
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
     opacity: 0;
@@ -128,9 +131,10 @@ a:hover .overlay-text {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Skill Testing Card */
+.education-section .container h2 {
+    color: #000; /* Black text */
+}
 
-/* Parallax Background */
 
 /* Parallax Background Styles */
 .promo-banner {
@@ -174,8 +178,24 @@ a:hover .overlay-text {
     z-index: 3;
 }
 
+/* Target the container and its children */
+.container.text-center.py-5 h2,
+.container.text-center.py-5 p {
+    color: #000 !important; /* Force black color */
+    text-shadow: none; /* Remove any text shadow */
+}
+
 
 /* the education section */
+/* Consistent heading style for sections */
+.section-heading {
+    font-size: 2.5rem; /* Match font size for consistency */
+    font-weight: bold; /* Make the text bold */
+    color: #000; /* Black color */
+    text-align: center; /* Center align */
+    margin-bottom: 2rem; /* Spacing below the heading */
+}
+
 
 .education-img {
     width: 100%; /* make the image the full width */
@@ -207,7 +227,7 @@ a:hover .overlay-text {
     left: 50%;          /* cneter the text horizontally */
     transform: translate(-50%, -50%);  /* centter the text */
     background: rgba(0, 0, 0, 0.6);  /* background color */ 
-    color: white;                    /* text color */ 
+    color: #000;                    /* text color */ 
     padding: 10px 20px;                /* paddiing for the text */
     border-radius: 5px;                /* round the border  */ 
     font-size: 1.2rem;                 /* the size of the text */ 
