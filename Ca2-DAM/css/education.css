@@ -1,16 +1,13 @@
 /* Education */
 
-
-
-
 .overlay-text {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay. */
     opacity: 0;
-    transition: opacity 0.3s ease-in-out; /* Smooth fade-in */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in .*/
 }
 
 a:hover .overlay-text {
-    opacity: 1; /* Show overlay on hover */
+    opacity: 1; /* Show overlay on hover. */
 }
 
 /* section for the skills */ 
@@ -19,12 +16,12 @@ a:hover .overlay-text {
     margin-bottom: 0;
 }
 .skillest-card {
-    background: #f8f9fa; /* background color light*/
+    background: #f8f9fa; /* background color light.*/
     padding: 20px 15px;
     border-radius: 10px; /* rouding the border */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9); /* style for the shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9); /* style for the shadow. */
     height: 100%; /* full height */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* add the hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* add the hover effect. */
     display: flex; /* flex for the card */
     flex-direction: column;  /* column for the card */
     justify-content: space-between; /* space for the card */

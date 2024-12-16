@@ -34,7 +34,7 @@ a:hover {
 }
 
 .nav-link.active {
-    color: #0056b3 !important;  /* color for the active link navbar */ 
+    color: #0056b3 !important;  /* color for the active link navbar. */ 
     font-weight: bold; 
     transform: scale(1.1); 
 }
@@ -71,17 +71,17 @@ i {
 
 /* Hover Effect for Email Icon */
 .email-icon:hover {
-    color: #007bff; /* Blue on hover */
-    transform: scale(1.2); /* Slightly enlarge the icon */
+    color: #007bff; /* Blue on hover. */
+    transform: scale(1.2); /* Slightly enlarge the icon. */
 }
 
 /* Hover Effect for Call Icon */
 .call-icon:hover {
     color: #28a745; /* Green on hover */
-    transform: scale(1.2); /* Slightly enlarge the icon */
+    transform: scale(1.2); /* Slightly enlarge the icon. */
 }
 
-/* Optional: Add Cursor Pointer for Icons */
+/* Optional: Add Cursor Pointer for Icons. */
 .email-icon,
 .call-icon {
     cursor: pointer;
