@@ -1,0 +1,568 @@
+
+/* author: Diego Meidna */
+
+
+/* general styles for the body */
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* style for the container */
+
+h1, h4, h5 {
+    font-weight: bold;
+    
+}
+
+
+/* navbar decoration */
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.nav-link.active {
+    color: #0056b3 !important;  /* color for the active link navbar */ 
+    font-weight: bold; 
+    transform: scale(1.1); 
+}
+
+
+/*  size for the name menu */ 
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.navbar-nav .nav-link.font-weight-bold {
+    font-size: 1.4rem;
+}
+
+
+/* back to top */
+
+.btn-primary.position-fixed {
+    z-index: 1000;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary.position-fixed:hover {
+    background-color: #0056b3;
+}
+
+/* General Icon Styling */
+i {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect for Email Icon */
+.email-icon:hover {
+    color: #007bff; /* Blue on hover */
+    transform: scale(1.2); /* Slightly enlarge the icon */
+}
+
+/* Hover Effect for Call Icon */
+.call-icon:hover {
+    color: #28a745; /* Green on hover */
+    transform: scale(1.2); /* Slightly enlarge the icon */
+}
+
+/* Optional: Add Cursor Pointer for Icons */
+.email-icon,
+.call-icon {
+    cursor: pointer;
+}
+
+
+/* social media icons header */
+
+.socials-icon {
+    font-size: 1.5rem; /* icon size */
+    transition: transform 0.3s ease, color 0.3s ease;/* add the hover effect */
+}
+
+/* socials icons */
+
+.socials-icon:hover {
+    color: #007bff; /* change the color on hover */
+    transform: scale(1.2); /* add a affect on the icon hover */
+}
+
+/* socials icons active */
+
+.socials-icon:active {
+    transform: scale(1.1) rotate(10deg); /* add a effect on the icon */
+    color: #0056b3; /* color change for the icon */
+}
+
+
+/* Search header */
+
+.modal-content {
+    z-index: 1050; /* Ensure modal content is on top */
+}
+
+#searchInput {
+    pointer-events: auto; /* Ensure input field is interactive */
+}
+
+.modal-backdrop {
+    z-index: 1040; /* Keep backdrop below the modal */
+}
+
+
+/* Ensure the modal content is interactive */
+.modal-content {
+    pointer-events: auto;
+}
+
+/* Make the input and button interactive */
+#searchInput {
+    pointer-events: auto;
+}
+
+.modal {
+    z-index: 1050; /* Bootstrap default */
+}
+
+.modal-content {
+    background-color: #f9f9f9; /* Light background */
+    color: #333; /* Dark text */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+#searchInput {
+    background-color: #fff; /* White input background */
+    border: 1px solid #007bff; /* Blue border */
+    border-radius: 5px; /* Slightly rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    color: #333; /* Dark text */
+}
+
+#searchInput:focus {
+    border-color: #0056b3; /* Darker blue on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue glow */
+}
+
+.modal-header {
+    border-bottom: 1px solid #ddd; /* Light border for separation */
+}
+
+.modal-header .btn-close {
+    filter: brightness(80%); /* Make the close button slightly lighter */
+}
+
+
+/* headers */
+
+header {
+    border-bottom: 2px solid #ddd;
+}
+
+/* headers img */
+
+header img {
+    max-height: 50px;
+}
+
+/* all headers*/
+
+.navbar-light .navbar-nav .nav-link {
+    font-size: 16px;
+    color: #333;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #007bff;
+}
+
+
+
+/* About Section */
+
+#about {
+    padding: 3rem 0;
+}
+
+/* style for the section size and font */
+
+#about h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* paragragh style */
+
+#about p {
+    font-size: 1rem;
+    color: #6c757d; /* color gray */
+}
+
+/* image style for the width, height and border */
+
+#about img.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+
+.image-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for the overlay */
+    border-radius: 0.5rem; /* Matches the rounded corners of the image */
+}
+
+.pitem:hover .image-overlay {
+    opacity: 1; /* Fully visible on hover */
+}
+
+.image-overlay i {
+    font-size: 2rem; /* Adjust icon size */
+    color: #ffffff; /* White icon color */
+}
+
+.position-relative {
+    position: relative !important; /* Ensure parent container is relative */
+}
+
+.position-absolute {
+    position: absolute !important; /* Overlay is absolutely positioned */
+    z-index: 2; /* Ensure it appears above the image */
+}
+
+.nav-link {
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.1rem;
+    font-size: 0.9rem; /* Smaller font size */
+}
+
+
+/* Overlay on Hover */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Click Effect: Enlarge Image in a Modal */
+.gallery-img:active {
+    transform: scale(1.2); /* Enlarges the image slightly more on click */
+    transition: transform 0.2s ease-in-out; /* Faster transition for click effect */
+}
+
+/* the hover effect for the button and color */ 
+
+#contact .btn-primary:hover {
+    background-color: #0056b3; 
+    border-color: #004085;
+}
+
+.category-items {
+    display: none;
+    margin-top: 10px;
+}
+.category-content {
+    display: none;
+}
+.category-content.active {
+    display: block;
+}
+.nav {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+}
+.nav a {
+    font-weight: bold;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+}
+.nav a.active {
+    color: #007bff;
+    border-bottom: 3px solid #007bff;
+}
+
+
+/* the Toggle Switch for the page css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  }
+  
+
+  /* General Body Styling */
+body {
+    transition: background-color 0.4s ease, color 0.4s ease;
+    background-color: #ffffff; /* Default Light Theme Background */
+    
+}
+
+/* Light Theme */
+body.light-theme {
+    background-color: #ffffff;
+    color: #333; /* Default text color for light theme */
+}
+
+/* Dark Theme (Light Gray) */
+body.dark-theme {
+    background-color: #D3D3D3; /* Light Gray for the dark theme */
+    color: #333; /* Neutral dark text color */
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Navbar Styling */
+
+
+body.light-theme .navbar {
+    background-color: #f8f9fa;
+    /* color: #333; */
+}
+
+body.dark-theme .navbar {
+    color: #333; /* Text color for contrast */
+}
+
+/* Toggle Switch Container Styling */
+.toggle-switch-container {
+    margin-top: 2px;
+    text-align: center; /* Center align the toggle */
+}
+
+/* Toggle Switch Styling */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.toggle-switch input {
+    display: none; /* Hide the default checkbox */
+}
+
+.toggle-switch .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc; /* Default slider background */
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+.toggle-switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.4s ease;
+}
+
+/* Toggle Switch Checked State */
+.toggle-switch input:checked + .slider {
+    background-color: #808080; /* Gray slider for checked state */
+}
+
+.toggle-switch input:checked + .slider:before {
+    transform: translateX(20px); /* Move the toggle knob */
+}
+
+/* Toggle Label Styling */
+.toggle-label {
+    display: none; /* Hide the label by default */
+}
+
+
+/* Additional Themed Elements */
+
+/* Button Styling */
+body.light-theme .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+body.dark-theme .btn-primary {
+    background-color: #A9A9A9; /* Light gray for buttons */
+    color: #333;
+    border-color: #A9A9A9;
+}
+
+/* Table Styling */
+body.light-theme .table {
+    background-color: #ffffff;
+    color: #333;
+}
+
+body.dark-theme .table {
+    background-color: #D3D3D3;
+    color: #333;
+}
+
+/* List Group Items */
+body.light-theme .list-group-item {
+    background-color: #ffffff;
+    color: #333;
+}
+
+body.dark-theme .list-group-item {
+    background-color: #D3D3D3;
+    color: #333;
+}
+
+
+/* Card Styling */
+body.light-theme .card {
+    background-color: #ffffff;
+    border-color: #ddd;
+}
+
+body.dark-theme .card {
+    background-color: #D3D3D3;
+    border-color: #A9A9A9;
+}
+
+
+
+/* Dark Theme for Text Box */
+body.dark-theme .text-box {
+    color: #fff; /* Light text for contrast */
+}
+
+/* Text Styles */
+.text-box h3 {
+    font-size: 1.5rem; /* Adjust heading size */
+    font-weight: bold; /* Bold heading */
+    margin-bottom: 10px; /* Add spacing below the heading */
+}
+
+.text-box p {
+    margin: 0; /* Remove default margins */
+    font-size: 1rem; /* Adjust paragraph font size */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Add Hover Effect for Better Interactivity */
+
+body.dark-theme .education-section {
+    color: #ffffff; /* White text for contrast */
+}
+
+
+body.dark-theme .text-box {
+    color: #ffffff; /* White text */
+}
+.text-box {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* General Styling for the Section */
+h2.text-center {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333; /* Dark gray for better visibility */
+    margin-bottom: 2rem; /* Space below the heading */
+}
+
+.text-box {
+    color: #333; /* Dark gray for better visibility */
+    padding: 20px; /* Space inside the text box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: left; /* Align text to the left */
+    margin: 0 auto; /* Center the text box horizontally */
+    max-width: 600px; /* Restrict the width for better readability */
+}
+
+
+
+/* Footer Styling */
+.footer {
+    background-color: #343a40; /* Dark gray background */
+    color: #ffffff; /* White text */
+    text-align: center;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer a {
+    color: #ffffff; /* Default icon color */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.footer a:hover {
+    color: #007bff; /* Highlight color on hover */
+    transform: scale(1.2); /* Slight enlargement effect */
+}
+
+.footer .list-inline-item {
+    margin: 0 10px; /* Add spacing between icons */
+}
+
+.footer .list-inline-item a i {
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth icon transition */
+}
+
+.footer .list-inline-item a:hover i {
+    color: #007bff; /* Highlight icon color */
+    transform: rotate(360deg); /* Rotate on hover */
+}
+
+.navbar, .footer, .card, .folder-section {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Footer styling for light theme */
+body.light-theme .footer {
+    background-color: #343a40; /* Dark gray for dark theme */
+    color: #ffffff; /* Dark text */
+}
+
+/* Footer styling for dark theme */
+body.dark-theme .footer {
+    background-color: #A9A9A9; /* Light gray for light theme */
+    color: #ffffff; /* Light text */
+}
+
+/* Add transition for smooth theme switching */
+.footer {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+

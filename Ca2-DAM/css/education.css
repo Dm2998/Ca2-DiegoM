@@ -1,0 +1,254 @@
+/* Education */
+
+.overlay-text {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in */
+}
+
+a:hover .overlay-text {
+    opacity: 1; /* Show overlay on hover */
+}
+
+/* section for the skills */ 
+#skillest {
+    padding: 3rem 0;
+    margin-bottom: 0;
+}
+.skillest-card {
+    background: #f8f9fa; /* background color light*/
+    padding: 20px 15px;
+    border-radius: 10px; /* rouding the border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9); /* style for the shadow */
+    height: 100%; /* full height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* add the hover effect */
+    display: flex; /* flex for the card */
+    flex-direction: column;  /* column for the card */
+    justify-content: space-between; /* space for the card */
+    text-align: center;
+    
+}
+
+/*  hover effect */
+
+.skillest-card:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+#skillest .skillest-card:hover {
+    transform: translateY(-5px); /* Add subtle hover effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#skillest .skillest-card i {
+    color: #007bff;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+#skillest .skillest-card:hover i {
+    color: #0056b3; /* Change icon color on hover */
+}
+
+
+.skillest-card i {
+    color: #007bff; /* blue color for the icons */ 
+    margin-bottom: 15px; /* Space between icons and text */
+    transition: color 0.3s ease;
+}
+
+.skillest-card:hover i {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+.skillest-card h4 {
+    font-family: 'Poppins', sans-serif;     /* Apply Poppins font */
+    font-size: 1.1rem;                      /* Adjust heading size */
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #343a40;
+}
+
+.skillest-card p {
+    font-family: 'Roboto', sans-serif; /* the size of the text */
+    font-size: 1rem;                   /* for the text size */
+    color: #6c757d;                 /* color for the text */
+    line-height: 1.6;                  /* line the height */
+    margin: 0;                        /* margin for the text */
+}
+
+/* skills icons */
+
+.skill-icon i {
+    font-size: 3rem;
+    color: #6c757d; /* Default muted color */
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+.skill-icon p {
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.skill-icon:hover i {
+    transform: scale(1.2); /* Slight enlargement */
+    color: #007bff; /* Highlight color */
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.skill-icon:hover p {
+    color: #007bff; /* Match icon highlight */
+    font-weight: bold;
+}
+
+.skills-section i {
+    font-size: 3rem;
+    transition: transform 0.3s, color 0.3s;
+}
+.skills-section i:hover {
+    transform: scale(1.2);
+    color: #007bff;
+}
+
+/* Core Skills Section Styles */
+.core-skill-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.core-skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Skill Testing Card */
+
+/* Parallax Background */
+
+/* Parallax Background Styles */
+.promo-banner {
+    height: 400px; /* Increased height for better visibility */
+    background-size: cover; /* Ensures the background fills the container */
+    background-position: center;
+    position: relative;
+    background-attachment: fixed; /* Parallax effect */
+    background-repeat: no-repeat;
+}
+
+.promo-banner:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Ensure the text in the parallax container is visible */
+.promo-banner .container {
+    position: relative;
+    z-index: 2; /* Position above the overlay */
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(14, 0, 0, 0.8);
+}
+
+.skills-section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Content under the promo-banner */
+.skills-content {
+    background: #ffffff; /* Ensures separation from the parallax */
+    padding: 2rem 0;
+    z-index: 3;
+}
+
+
+/* the education section */
+
+.education-img {
+    width: 100%; /* make the image the full width */
+    max-width: 500px;    /* set the max width */
+    height: 300px;       /* set the image height */
+    object-fit: cover;    /* make the imagen cover */
+    border-radius: 10px;  /* round the border */ 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* add the shadow */
+    margin: auto; /* Center the image horizontally */
+}
+
+.image-wrapper { 
+    position: relative;
+    display: inline-block;
+    width: 100%; /* make the image the full width */
+    max-width: 400px; /* set the max width */
+}
+
+.education-img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    object-fit: cover; /* Ensure the image fits properly */
+}
+
+.overlay-text {
+    position: absolute; /* position the text */
+    top: 50%;           /* center the text vertically */
+    left: 50%;          /* cneter the text horizontally */
+    transform: translate(-50%, -50%);  /* centter the text */
+    background: rgba(0, 0, 0, 0.6);  /* background color */ 
+    color: white;                    /* text color */ 
+    padding: 10px 20px;                /* paddiing for the text */
+    border-radius: 5px;                /* round the border  */ 
+    font-size: 1.2rem;                 /* the size of the text */ 
+    opacity: 0;
+    transition: opacity 0.3s ease;      /* add the hover effect */
+}
+
+.image-wrapper:hover .overlay-text {
+    opacity: 1;                         /* show the text on hover */ 
+}
+
+/* General table styles */
+
+.list-group-item {
+    text-align: center; /* Centers text horizontally */
+    display: table-cell; /* Ensures proper vertical centering */
+    padding: 5px 10px; /* Optional: Adjust padding for compact design */
+    font-size: 0.9rem; /* Optional: Adjust font size */
+    height: 50px; /* Optional: Ensure consistent height */
+}
+
+/* Compact table cells */
+.table th,
+.table td {
+    padding: 0px 10px; /* Reduce padding inside cells */
+    text-align: left; /* Align text to the left */
+    border: 1px solid #ddd; /* Add a thin border for separation */
+}
+
+/* Compact table header */
+.table th {
+    background-color: #f8f9fa; /* Light gray background */
+    font-weight: bold; /* Emphasize header text */
+    text-transform: uppercase; /* Optional: Capitalize header text */
+}
+
+/* Hover effect for rows */
+.table tr:hover {
+    background-color: #f8f9fa; /* Light gray background on hover */
+
+}
+
+/* Remove extra spacing around the table */
+.table-container {
+    margin: 0 auto; /* Center the table container */
+}

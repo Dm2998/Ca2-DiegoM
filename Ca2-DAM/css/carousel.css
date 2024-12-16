@@ -1,0 +1,53 @@
+/* carousel style for the images */ 
+
+.carousel {
+    position: relative;
+}
+
+.carousel-item {
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+    backface-visibility: hidden; 
+}
+
+
+.carousel-item:not(.active) {
+    display: none; /
+}
+
+.carousel-inner {
+    overflow: hidden;
+    height: auto;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 400px; /* Adjust the height of the carousel*/
+}
+
+/* color for the carousel for the all images */ 
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* color for the carousel background */
+    border-radius: 50%;
+}
+
+.carousel-caption h1, 
+.carousel-caption p {
+    color: rgba(255, 255, 255, 0.5); /* color for the text like light */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* show the shadow for the text. */
+    font-family: "Arabic Typesetting", serif; /* text carousal font */
+}
+
+.carousel-caption {
+    
+    text-align: center;     /* Align text to center */
+    color: #fff; 
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 250px; /* Adjust for smaller screens */
+    }
+}

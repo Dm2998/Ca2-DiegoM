@@ -1,0 +1,104 @@
+/* Diego Medina */
+
+
+
+/* search section*/
+
+header {
+    padding: 15px 0; /* Add padding to the header */    
+    
+}
+
+  
+  /* Social Media Icons */
+  .socials-icon {
+    font-size: 1.2rem;
+  }
+  
+  /* Search Wrapper */
+  .search-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 15px; /* Add small spacing between search and icons */
+    transition: 0.3s ease-in-out;
+  }
+  
+  .search-btn {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .search-btn:focus {
+    outline: none;
+  }
+  
+  .search-input {
+    width: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    font-size: 0.85rem;
+    border: none;
+  }
+  
+  .search-wrapper:hover .search-input,
+  .search-wrapper.active .search-input {
+    width: 200px; /* Adjust the width for the expanded state */
+    opacity: 1;
+    margin-left: 5px; /* Add spacing between input and search button */
+  }
+  
+  .search-input:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .search-wrapper:hover .search-btn i {
+    color: #007bff; /* Highlight the search icon on hover */
+  }
+
+/* Style for the search notification */
+#searchNotification {
+    z-index: 1050; /* Ensure it's above other elements */
+    max-width: 300px;
+    text-align: center;
+    animation: fadeInOut 3s ease-in-out;
+  }
+  
+  /* Fade-in and fade-out animation */
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    20%, 80% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Style for the search-wrapper alignment */
+  .search-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-wrapper .search-btn {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  
+  .search-wrapper .search-btn i {
+    font-size: 16px;
+  }
+  
+  .search-wrapper .search-input {
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+  }
+  

@@ -1,0 +1,166 @@
+
+/* Experience section */
+
+.experience {
+    margin-top: 0; /* Remove unnecessary margin */
+    padding: 3rem 0; /* Consistent padding for the section */
+    position: relative;
+}
+
+
+.promo-banner {                                 
+    position: relative;
+    height: 200px;      
+    background-size: cover;  
+    background-position: center;
+    background-repeat: no-repeat;
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    z-index: 1; /* Ensure it's behind the content */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.promo-banner .container {
+    display: grid; 
+    z-index: 2; /* Ensure text appears above the background */
+}
+
+.parallax-window {
+    background: url('../img/parallax.jpg') no-repeat center center fixed; /* Set the background image */
+    background-size: cover; /* Cover the entire window */
+    position: relative; /* Position the content */
+    overflow: hidden; /* Hide overflow content */
+}
+
+/* General Styling */
+#Hobbies {
+    background-color: #f8f9fa;
+}
+
+/* Filter Buttons */
+.filter-btn.active {
+    background-color: #007bff;
+    color: white;
+}
+.filter-btn {
+    transition: all 0.3s ease;
+}
+.filter-btn:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Gallery Item */
+.gallery-item {
+    transition: transform 0.3s ease;
+}
+.gallery-item:hover {
+    transform: rotate(3deg) scale(1.05); /* Add rotation and scale effect */
+}
+
+/* Gallery Image */
+.gallery-container {
+    width: 100%; /* Full width for responsive design */
+    height: 500px; /* Fixed height for consistency */
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-img {
+    width: 100%; /* Ensures the image covers full width */
+    height: 100%; /* Ensures the image fits the height */
+    object-fit: cover; /* Crops the image to fit without distortion */
+    transition: transform 0.3s ease;
+    float: left;
+    max-height: 20vw;
+    min-height: 20vw;
+    max-width: 20vw;
+    min-width: 20vw;
+
+}
+.gallery-img:hover {
+    transform: scale(1.1);
+}
+
+
+/* experience */
+
+/* Timeline Container */
+.experience-timeline {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    z-index: 0; /* Ensure the timeline doesn't overlap modals */
+}
+
+/* Timeline Line */
+.experience-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #0d6efd;
+    transform: translateX(-50%);
+    z-index: -1; /* Push the line behind items */
+}
+
+/* Timeline Item */
+.experience-timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+    z-index: 1; /* Ensure items are above the line */
+}
+
+/* Timeline Date */
+.experience-timeline-date {
+    background: #fff;
+    color: #0d6efd;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #0d6efd;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+/* Timeline Content */
+.experience-timeline-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+/* Timeline Icon */
+.experience-timeline-icon {
+    margin-bottom: 15px;
+}
+
+.timeline-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #0d6efd;
+    object-fit: cover;
+}
+
+/* Responsive Design for Timeline */
+@media (max-width: 768px) {
+    .experience-timeline::before {
+        left: 50%;
+    }
+}
+
