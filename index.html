@@ -298,15 +298,14 @@
     <!-- Education Section -->
     <section class="education-section py-5 text-white" id="Education">
         <!-- Parallax Background -->
-        <div class="promo-banner parallax-window" 
-            data-parallax="scroll" 
-            data-image-src="Ca2-DAM/images/pc0.jpg">
+        <div id="projects-section-education" class="parallax-separator">
+            <a href="#projects" class="parallax-title">Education</a>
         </div>
 
         <!-- Content Section -->
         <div class="container text-center py-5">
             <!-- Section Heading -->
-            <h2 class="mb-5">Education</h2>
+            <!-- <h2 class="mb-5">Education</h2> -->
             
             <!-- Education Row -->
             <div class="row align-items-center">
@@ -324,7 +323,7 @@
 
                 <!-- Image Content -->
                 <div class="col-md-5 order-md-2 text-center">
-                    <a href="https://www.tudublin.ie/" target="_blank" class="d-inline-block position-relative">
+                    <a href="https://www.tudublin.ie/" target="_blank" rel="noopener noreferrer" class="d-inline-block position-relative">
                         <img src="Ca2-DAM/images/pc7.jpg" 
                             class="img-fluid rounded shadow education-img" 
                             alt="Technological Dublin University">
@@ -336,70 +335,66 @@
                 </div>
             </div>
         </div>
+        <div class="container my-5 module-listing-section">
+        <h2 class="text-center mb-4">Academic Modules & Awards 🎓</h2>
+        <p class="text-center lead mb-5">Bachelor of Science (Honours) - Class II Grade 2</p>
 
-        <!-- Module Listing -->
-        <div class="container my-5">
-            <!-- Subheading -->
-            <h2 class="text-center mb-4">Module Listing & Class Honours, Grade 2</h2>
-            
-            <!-- Navigation Links -->
-            <nav class="nav justify-content-center mb-4">
-                <a class="nav-link category-link" data-category="Category1">Year 1</a>
-                <a class="nav-link category-link" data-category="Category2">Year 2</a>
-                <a class="nav-link category-link" data-category="Category3">Year 3</a>
-                <a class="nav-link category-link" data-category="Category4">Year 4</a>
-            </nav>
+        <div class="d-flex justify-content-center flex-wrap gap-3 mb-5">
+            <button type="button" class="btn btn-outline-primary module-year-btn" 
+                    data-year="Year1" 
+                    data-title="First Year Modules" 
+                    data-gpa="3.20">View Year 1 Modules</button>
+            <button type="button" class="btn btn-outline-primary module-year-btn" 
+                    data-year="Year2" 
+                    data-title="Second Year Modules" 
+                    data-gpa="3.35">View Year 2 Modules</button>
+            <button type="button" class="btn btn-outline-primary module-year-btn active" 
+                    data-year="Year3" 
+                    data-title="Third Year Modules" 
+                    data-gpa="3.48">View Year 3 Modules</button>
+            <button type="button" class="btn btn-outline-primary module-year-btn" 
+                    data-year="Year4" 
+                    data-title="Final Year Modules" 
+                    data-gpa="3.60">View Final Year Modules</button>
+        </div>
 
-            <!-- Category 1: Year 1 -->
-            <div id="Category1" class="category-items">
-                <ul class="list-group">
-                    <li class="list-group-item">| Programming 1 | | Program Design | | Web Development |</li>
-                    <li class="list-group-item">| Programming 2 | | IT Fundamental | | Computer Architecture and Technology |</li>
-                    <li class="list-group-item">| Databases | | Mathematics |</li>
-                </ul>
-            </div>
+        <div id="moduleDetailModal" class="app-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="app-modal-content">
+                <div class="app-modal-header">
+                    <h5 class="modal-title" id="modalTitle">Loading Modules...</h5>
+                    <button type="button" class="app-close-btn" onclick="closeAppModal('moduleDetailModal')" aria-label="Close">&times;</button>
+                </div>
+                
+                <div class="app-modal-body">
+                    <div class="institution-info d-flex align-items-center mb-3">
+                        <img id="instLogo" src="img/technological_university_dublin_logo.jpg" alt="University Logo" class="me-3">
+                        <p class="mb-0">
+                            <b id="instName">Technological University Dublin</b> <span class="text-muted">· June 2024</span><br>
+                            <span class="gpa-display text-success" id="gpaDisplay">GPA: 3.02</span>
+                        </p>
+                    </div>
+                    
+                    <ul id="moduleList" class="module-list">
+                        </ul>
 
-            <!-- Category 2: Year 2 -->
-            <div id="Category2" class="category-items">
-                <ul class="list-group">
-                    <li class="list-group-item">| Databases | | Operating Systems 2 | | Bash Scripting |</li>
-                    <li class="list-group-item">| Web Development 2 | | Object-Oriented Programming |</li>
-                    <li class="list-group-item">| Mathematics 2 | | Project | | Info Security |</li>
-                </ul>
-            </div>
-
-            <!-- Category 3: Year 3 -->
-            <div id="Category3" class="category-items">
-                <ul class="list-group">
-                    <li class="list-group-item">| Client-Server Programming | | Big Data |</li>
-                    <li class="list-group-item">| Cloud Computing | | Data Analysis | | Info Security |</li>
-                    <li class="list-group-item">| Work Placement |</li>
-                </ul>
-            </div>
-
-            <!-- Category 4: Year 4 -->
-            <div id="Category4" class="category-items">
-                <ul class="list-group">
-                    <li class="list-group-item">| Final Year Project | | DevOps | | Private Cloud Architecture |</li>
-                    <li class="list-group-item">| Advanced Security-IoT Cloud | | Interactive Media Design |</li>
-                    <li class="list-group-item">| IT Management | | Enterprise Performance Architecture |</li>
-                </ul>
+                    <button type="button" class="btn btn-secondary mt-3 w-100" onclick="closeAppModal('moduleDetailModal')">Close Details</button>
+                </div>
             </div>
         </div>
-    </section><!-- End of Education Section -->
-    
+    </div>
+
+<!-- Skills Section -->
 
     <!-- Skills Section -->
     <section class="skills-section py-5 text-white" id="skills">
         <!-- Parallax Background -->
-        <div class="promo-banner parallax-window" 
-            data-parallax="scroll" 
-            data-image-src="Ca2-DAM/images/pc0.jpg">
+        <div id="projects-section" class="parallax-separator">
+            <a href="#projects" class="parallax-title">Skills</a>
         </div>
 
         <!-- Section Heading -->
         <div class="container text-center py-5">
-            <h2 class="display-4 font-weight-bold">Skills</h2>
+            <!-- <h2 class="display-4 font-weight-bold">Skills</h2> -->
             <p class="lead">Programming Languages, Tools & Databases</p>
         </div>
 
@@ -510,81 +505,93 @@
             </div>
         </div>
     </section><!-- End the section for the core skills -->
-
-    <!-- Another parallax background with the text -->
-     <!-- Experience Section -->
-    <section class="experience py-5" id="Experience">
-        <!-- Parallax Background -->
-        <div class="promo-banner parallax-window" 
-            data-parallax="scroll" 
-            data-image-src="Ca2-DAM/images/pc0.jpg">
-        </div>
-
-        <!-- Section Heading -->
-        <div class="container py-5 text-center text-white">
-            <p class="text-uppercase mb-0">My Resume</p>
-            <h2 class="display-4 font-weight-bold">Working Experience</h2>
-        </div>
-
+    <!-- Parallax Separator -->
+    <div id="work-section" class="parallax-separator">
+        <a href="#education-experience" class="parallax-title">Work and Education</a>
+    </div>
+<!--  -->
         <!-- Experience Timeline -->
+
+    <section id="education-experience" class="py-5">
         <div class="container">
-            <div class="experience-timeline position-relative">
+            <div class="experience-timeline">
                 <!-- Timeline Item 1 -->
-                <div class="experience-timeline-item mb-5">
-                    <div class="experience-timeline-date">2024</div>
+                <div class="experience-timeline-item experience-timeline-right">
                     <div class="experience-timeline-content">
-                        <a href="https://www.gov.ie/en/organisation/department-of-social-protection/" 
-                        target="_blank" 
-                        rel="noopener noreferrer">
-                            <img src="Ca2-DAM/images/DSP.jpg" 
-                                alt="Experience Icon" 
-                                class="timeline-img img-fluid mb-3">
-                        </a>
+                        <div class="experience-timeline-date">2021-2025</div>
+                        <div class="experience-timeline-icon">
+                            <img src="/Ca2-DAM/images/DSP.jpg" alt="TU Dublin Logo">
+                        </div>
                         <h5 class="fw-bold text-primary">
-                            Department Social Protection, Data Center Kilmainham D8
+                            Technological University Dublin
                         </h5>
-                        <p class="mb-1">Intern Infrastructure (Jan 2024 - Aug 2024)</p>
-                        <p>
-                            Managed and optimized IT infrastructure for critical government operations, 
-                            ensuring system reliability and efficiency. Collaborated with cross-functional 
-                            teams to implement innovative solutions that enhanced service delivery to citizens.
-                        </p>
+                        <p>Graduate 2025</p>
+                        <p>Bachelor of Science (Honours) Computing in IT Management</p>
+                        <!-- <p>Web Development, Cloud Computing, Server Administrations, Scripting, Cybersecurity and
+                            Dev-Ops.</p> -->
+                        <!-- <a href="https://www.tudublin.ie/" target="_blank" class="experience-timeline-button">
+                            Learn More
+                        </a> -->
+                        <!-- <button class="experience-timeline-button"
+                            onclick="experienceOpenModal('education-award2024')">
+                            View Awards
+                        </button> -->
                     </div>
                 </div>
 
-                <!-- Timeline Item 2 -->
-                <div class="experience-timeline-item">
-                    <div class="experience-timeline-date">2017</div>
+                    <!-- Company Logo -->
+                <div class="experience-timeline-item experience-timeline-left">
                     <div class="experience-timeline-content">
-                        <a href="https://www.dunnesstores.com/" 
-                        target="_blank" 
-                        rel="noopener noreferrer">
-                            <img src="Ca2-DAM/images/DS.jpg" 
-                                alt="Company Logo" 
-                                class="timeline-img img-fluid mb-3">
-                        </a>
+                        <div class="experience-timeline-date">2024</div>
+                        <div class="experience-timeline-icon">
+                            <img src="/Ca2-DAM/images/DS.jpg" alt="Department of Social Protection Logo">
+                        </div>
+                        <h5 class="fw-bold text-primary">
+                            Department of Social Protection
+                        </h5>
+                        <p>Intern Department of Social Protection - (Jan 2024 - Aug 2024) <br> (On-Site)</p>
+                        <!-- <p>IT Desktop Support, Cybersecurity Monitoring, Software Installations and Server
+                            Administrations.</p> -->
+                        <!-- <a href="https://www.typetec.ie//" target="_blank" class="experience-timeline-button">
+                                Learn More
+                        </a> -->
+                    </div>
+                </div>
+                    <!-- Dunnes Stores -->
+                <div class="experience-timeline-item experience-timeline-right">
+                    <div class="experience-timeline-content">
+                        <div class="experience-timeline-date">2017-2022</div>
+                        <div class="experience-timeline-icon">
+                            <img src="/Ca2-DAM/images/DS.jpg" alt="Dunnes Stores Logo">
+                        </div>
                         <h5 class="fw-bold text-primary">Dunnes Stores</h5>
-                        <p class="mb-1">Customer Service (2017-2024)</p>
-                        <p>
-                            Delivered excellent customer service, managed inventory, and contributed 
-                            to store efficiency in a fast-paced retail environment.
-                        </p>
+                        <p>Customer Service Representative - (2017 - 2022)</p>
+                        <!-- <p>On-Site IT Support, Hardware Installations, Network Monitoring and Troubleshooting.</p> -->
+                        <!-- <a href="https://www.dunnesstores.com/" target="_blank" class="experience-timeline-button">
+                            Learn More
+                        </a> -->
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section>  
+        
+
+<!--  -->
 
     
             
     <!-- End of Experiences Section -->
+    <div id="projects-section" class="parallax-separator">
+        <a href="#projects" class="parallax-title">Hobbies</a>
+    </div>
 
     <!-- Hobbies Section -->
     <section id="Hobbies" class="py-5 bg-light">
         <div class="container">
             <!-- Section Title -->
             <div class="text-center mb-5">
-                <h3>Hobbies</h3>
+                <!-- <h3>Hobbies</h3> -->
                 <p class="text-muted">In life, you need to find a place where you can escape from the demands and stress of everyday life, immerse yourself in tranquility and find the peace and rejuvenation you truly deserve..</p>
             </div>
             <!-- Filter Buttons -->
@@ -731,4 +738,3 @@
 </html>
 
 <!-- x00191146-Diego- Medina  -->
-

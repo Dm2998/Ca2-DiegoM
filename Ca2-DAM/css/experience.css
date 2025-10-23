@@ -1,48 +1,361 @@
+#education-experience {
+    background-color: #2C2C2C; /* Dark background */
+    color: #ffffff; /* Light text */
+    align-items: center;
+    /* padding: 0px 175px 0px 175px; */
+}
+
+.experience-timeline {
+    position: relative;
+    align-items: center;
+    /* padding: 0 0 0 0; */  /* background */
+}
+
+.experience-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #007bff; /* Bright blue timeline line */
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+/* Timeline Item */
+.experience-timeline-item {
+    position: relative;
+    margin: 20px 0;
+    width: 45%;
+    animation: fadeIn 0.8s ease-in-out; /* Animation */
+    opacity: 0;
+    transform: translateX(50px); /* Default animation (right) */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Visible Class */
+.experience-timeline-item.visible {
+    opacity: 1;
+    transform: translateX(0); /* Reset to original position */
+}
+
+.experience-timeline-right {
+    left: 55%; /* Align to the right of the timeline line */
+}
+
+
+
+/* left */
+
+.experience-timeline-left {
+    left: 0; /* Align to the left of the timeline line */
+    text-align: right;
+    transform: translateX(-50px); /* Default animation (left) */
+}
+
+.experience-timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    background-color: #007bff; /* Bright blue dots */
+    border-radius: 50%;
+    border: 3px solid #2C2C2C; /* Matches background color */
+    z-index: 1;
+}
+
+
+.experience-timeline-right::before {
+    left: -10px;
+}
+
+.experience-timeline-left::before {
+    right: -10px;
+}
+
+/* Timeline Content */
+.experience-timeline-content {
+    position: relative;
+    background-color: #494949; /* Default background color */
+    color: #ffffff; /* Default text color */
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    z-index: 1;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.experience-timeline-right .experience-timeline-content {
+    margin-left: 20px; /* Space between the card and the line */
+}
+
+.experience-timeline-left .experience-timeline-content {
+    margin-right: 20px; /* Space between the card and the line */
+}
+
+/* Hover Effect */
+.experience-timeline-content:hover {
+    background-color: #DCDCDC; /* Hover background color */
+    color: #000000; /* Hover text color */
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+}
+
+/* Timeline Date */
+.experience-timeline-date {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007bff; /* Bright blue date */
+    margin-bottom: 10px;
+}
+
+/* Button Styling */
+.experience-timeline-button,
+.experience-close-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.8s ease, transform 0.8s ease;
+    text-decoration: none;
+}
+
+.experience-timeline-button:hover,
+.experience-close-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.experience-timeline-button:active,
+.experience-close-btn:active {
+    transform: scale(0.95); /* Slightly shrink on click */
+    background-color: #003f8a; /* Even darker blue on active */
+}
+
+/* Icon Container */
+.experience-timeline-icon {
+    width: 50px; /* Circle size */
+    height: 50px;
+    background-color: #ffffff; /* White background for the circle */
+    border-radius: 50%; /* Makes it a perfect circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0; /* Spacing between the icon and other content */
+    overflow: hidden; /* Ensures no background is visible outside the circle */
+    border: 2px solid #DCDCDC; /* Optional border to emphasize the circle */
+}
+
+.experience-timeline-icon img {
+    width: 100%; /* Ensure the icon fits perfectly */
+    height: 100%;
+    object-fit: cover; /* Makes the icon scale proportionally to fill the circle */
+}
+
+.experience-timeline-left .experience-timeline-icon {
+    margin-left: auto; /* Push the icon to the right inside the left-aligned section */
+    margin-right: 0; /* Reset the right margin */
+}
+
+/* Modal Styling */
+.experience-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Ensures it appears above everything else */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scrolling for overflowing content */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    opacity: 0; /* Start invisible */
+    transform: scale(0.9); /* Slightly shrink */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth transition for opacity and scale */
+}
+
+/* Modal Content */
+.experience-modal-content {
+    background-color: #DCDCDC; /* White background for the body */
+    color: #000000; /* Dark text for the body */
+    margin: 10% auto; /* Centers the modal */
+    border-radius: 8px;
+    overflow: hidden; /* Ensures header and body align properly */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    width: 90%;
+    z-index: 1055; /* Ensure modal is above other content */
+    transition: transform 0.8s ease; /* Smooth transformation for content */
+}
+
+/* Fade-in Effect */
+.experience-modal.fade-in {
+    display: block; /* Make modal visible */
+    opacity: 1; /* Fully visible */
+    transform: scale(1); /* Original size */
+}
+
+/* Fade-out Effect */
+.experience-modal.fade-out {
+    opacity: 0; /* Make modal invisible */
+    transform: scale(0.9); /* Shrink slightly */
+    pointer-events: none; /* Disable interactions while fading out */
+}
+
+/* Modal Header */
+.experience-modal-header {
+    background-color: #2C2C2C; /* Dark background for the header */
+    color: #ffffff; /* Light text for the header */
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Modal Body */
+.experience-modal-body {
+    padding: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Close Button */
+.experience-modal-header .experience-close {
+    color: #ffffff;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.experience-modal-header .experience-close:hover,
+.experience-modal-header .experience-close:focus {
+    color: #61dafb; /* Highlight color on hover */
+    text-decoration: none;
+}
+
+/* Modal Info Section */
+.experience-modal-info {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.experience-modal-info img {
+    border-radius: 50%;
+    border: 2px solid #DCDCDC;
+}
+
+/* Modal Badges */
+.experience-modal-badges {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Ensures badges wrap to the next line if necessary */
+}
+
+.experience-modal-badges .badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff; /* Text color */
+}
+
+.experience-modal-badges .badge-success {
+    background-color: #28a745; /* Green */
+}
+
+.experience-modal-badges .badge-primary {
+    background-color: #007bff; /* Blue */
+}
+
+/* Grade Colors */
+.grade {
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 3px;
+    color: #ffffff; /* White text by default */
+}
+
+/* Specific Grades */
+.grade-a {
+    background-color: #28a745; /* Green */
+}
+
+.grade-b {
+    background-color: #007bff; /* Blue */
+}
+
+.grade-c {
+    background-color: #ffc107; /* Yellow */
+}
+
+.grade-d {
+    background-color: #fd7e14; /* Orange */
+}
+
+.grade-f {
+    background-color: #dc3545; /* Red */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience-timeline {
+        padding: 20px 0;
+    }
+
+    #experience-experience {
+        padding: 0px 35px 0px 35px;
+    }
+
+    .experience-timeline-item {
+        width: 100%;
+        text-align: center; /* Center text alignment */
+        left: 0 !important;
+        text-align: left !important;
+    }
+
+    .experience-timeline-item::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .experience-timeline-content {
+        margin: 0 auto !important;
+        text-align: center; /* Center the text inside */
+    }
+
+    .experience-timeline-icon {
+        margin: 0 auto 10px auto !important; /* Center icon on mobile */
+    }
+
+    .experience-timeline-left .experience-timeline-icon,
+    .experience-timeline-right .experience-timeline-icon {
+        margin-left: auto; /* Overrides the desktop alignment */
+        margin-right: auto; /* Centers the icon */
+    }
+    .experience-modal-content {
+        margin: 30% auto; /* Adjust the top margin to move it lower */
+
+    }  
+}
+
+
 
 /* Experience section */
 
-.experience {
-    margin-top: 0; /* Remove unnecessary margin */
-    padding: 3rem 0; /* Consistent padding for the section */
-    position: relative;
-}
-
-.container.text-center.text-white {
-    color: #000 !important; /* Force black text color for all children. */
-}
-
-.container.text-center.text-white p,
-.container.text-center.text-white h2 {
-    color: #000 !important; /* Force black text for <p> and <h2> specifically. */
-    text-shadow: none; /* Remove any text shadow. */
-}
-
-
-.promo-banner {                                 
-    position: relative;
-    height: 200px;      
-    background-size: cover;  
-    background-position: center;
-    background-repeat: no-repeat;
-    /* display: flex; */
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    z-index: 1; /* Ensure it's behind the content */
-    overflow: hidden; /* Prevent content overflow */
-}
-
-.promo-banner .container {
-    display: grid; 
-    z-index: 2; /* Ensure text appears above the background */
-}
-
-.parallax-window {
-    background: url('../images/pc0.jpg') no-repeat center center fixed; /* Set the background image */
-    background-size: cover; /* Cover the entire window */
-    position: relative; /* Position the content */
-    overflow: hidden; /* Hide overflow content */
-}
 
 /* General Styling */
 #Hobbies {
@@ -97,80 +410,83 @@
 }
 
 
-/* experience */
-
-/* Timeline Container */
-.experience-timeline {
-    position: relative;
-    padding: 20px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    align-items: center;
-    z-index: 0; /* Ensure the timeline doesn't overlap modals */
-}
-
-/* Timeline Line */
-.experience-timeline::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: #0d6efd;
-    transform: translateX(-50%);
-    z-index: -1; /* Push the line behind items */
-}
-
-/* Timeline Item */
-.experience-timeline-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 600px;
-    z-index: 1; /* Ensure items are above the line */
-}
-
-/* Timeline Date */
-.experience-timeline-date {
-    background: #fff;
-    color: #0d6efd;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: 2px solid #0d6efd;
-    border-radius: 50px;
-    margin-bottom: 20px;
-}
-
-/* Timeline Content */
-.experience-timeline-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Parallax Separator */
+.parallax-separator {
+    background-image: url('../images/pc0.jpg');
+    height: 250px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     z-index: 1;
+    display: flex;
+    /* Center the title horizontally */
+    justify-content: center;
+    align-items: center;
+    /* Center the title vertically */
 }
 
-/* Timeline Icon */
-.experience-timeline-icon {
-    margin-bottom: 15px;
+/* Optional: Overlay to darken or lighten the parallax section */
+.parallax-separator::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Add a dark overlay (adjust opacity as needed) */
+    z-index: 2;
 }
 
-.timeline-img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 2px solid #0d6efd;
-    object-fit: cover;
+/* Parallax Title */
+.parallax-title {
+    position: relative;
+    z-index: 3;
+    /* Ensure it appears above the overlay */
+    font-size: 2rem;
+    /* Adjust size as needed */
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    /* Remove underline from the link */
+    padding: 10px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    /* Optional: Add a border for emphasis */
+    border-radius: 5px;
+    /* Rounded corners */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Optional: Semi-transparent background */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effects */
 }
 
-/* Responsive Design for Timeline */
-@media (max-width: 768px) {
-    .experience-timeline::before {
-        left: 50%;
-    }
+/* Hover Effect for Parallax Title */
+.parallax-title:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Invert background on hover */
+    color: #000;
+    /* Change text color to black */
+    border-color: #000;
+    /* Match border with text color */
+    transform: scale(1.1);
+    /* Slight enlargement */
 }
 
+/* End of Parallax Separator */
+
+/* Line Between Sections */
+.section-divider {
+    width: 90%;
+    /* Adjust width to suit the design */
+    height: 1px;
+    /* Thickness of the line */
+    background: #0d6efd;
+    /* Blue color for the line */
+    margin: 40px auto;
+    /* Center the line with spacing */
+    border: none;
+}
+
+/* End of Line Between Sections */
