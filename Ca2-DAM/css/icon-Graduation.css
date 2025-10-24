@@ -1,0 +1,21 @@
+/* Style to align the icon correctly */
+.acad-icon {
+    display: inline-block; /* Essential for transform/animation to work */
+    animation: float 9s ease-in-out infinite; /* Apply the float animation */
+}
+
+/* Define the floating movement */
+@keyframes float {
+    0% {
+        /* Start position - slightly down and back to normal scale */
+        transform: translateY(0px) scale(1.5);
+    }
+    50% {
+        /* Mid-point - move up slightly and scale up a little */
+        transform: translateY(-5px) scale(1.20);
+    }
+    100% {
+        /* End position - back to start position */
+        transform: translateY(0px) scale(1.5);
+    }
+}

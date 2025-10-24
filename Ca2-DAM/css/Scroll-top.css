@@ -1,0 +1,61 @@
+
+/* --- Scroll-to-Top Button Styles --- */
+.scroll-to-top-btn {
+    /* Fixed Positioning: Always visible in the bottom-right corner */
+    position: fixed;
+    bottom: 20px;
+    /* right: 20px; */
+    left: 20px; /* <--- CHANGE THIS LINE (WAS 'right: 20px;') */
+    
+    /* Appearance */
+    background-color: #0d6efd; /* Use primary blue (or your theme color) */
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex; /* Centers the icon */
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    text-decoration: none;
+
+    /* Initial state and Transition for smooth hiding/showing */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100px); /* Start off-screen */
+    transition: all 0.3s ease-in-out;
+    
+    /* Ensure it's above other page elements */
+    z-index: 1000;
+}
+
+/* State when the button should be visible */
+.scroll-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Hover/Focus Effect for Professionalism */
+.scroll-to-top-btn:hover,
+.scroll-to-top-btn:focus {
+    background-color: #0b5ed7; /* Slightly darker blue on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    /* Subtle 'bounce' animation on hover */
+    animation: pulse 1s infinite; 
+}
+
+/* Keyframes for the Subtle Animation (Professional pulse) */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
