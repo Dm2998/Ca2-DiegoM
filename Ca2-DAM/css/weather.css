@@ -10,7 +10,7 @@
     text-align: left; /* Align text to the left */
     padding: 10px; /* Add padding */
     margin: 0 auto; /* Center the container */
-    color: #f5f5f5; /* Light default text for dark background */
+    color: #0c0c0c; /* Light default text for dark background */
 }
 
 /* Title Styling */
@@ -23,15 +23,15 @@
 
 /* Temperature Styling */
 .temp {
-    font-size: 1rem;
-    color: #cccccc; /* Blue color for temperature */
+    font-size: 1rem; 
+    color: #060606; /* Blue color for temperature */
     margin: 0;
 }
 
 /* Condition Styling */
 .condition {
     font-size: 0.9rem;
-    color: #f5f5f5; /* text light for the condition color for better readability */
+    color: #08080833; /* text light for the condition color for better readability */
     margin: 0;
 }
 
