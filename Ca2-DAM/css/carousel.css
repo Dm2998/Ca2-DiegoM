@@ -31,7 +31,6 @@
     background-color: rgba(0, 0, 0, 0.5); /* color for the carousel background */
     border-radius: 100%;
 }
-
 .carousel-caption h1, 
 .carousel-caption p {
     color: rgba(255, 255, 255, 0.5); /* color for the text like light */
