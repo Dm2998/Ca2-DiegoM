@@ -16,7 +16,7 @@ a:hover .overlay-text {
     margin-bottom: 0;
 }
 .skillest-card {
-    background: #f8f9fa; /* background color light.*/
+    background: #f8f9fa; 
     padding: 20px 15px;
     border-radius: 10px; /* rouding the border */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9); /* style for the shadow. */

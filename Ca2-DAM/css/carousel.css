@@ -6,7 +6,7 @@
 
 .carousel-item {
     transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
-    backface-visibility: hidden; 
+    backface-visibility: hidden;
 }
 
 
@@ -21,7 +21,7 @@
 
 .carousel-item img {
     object-fit: cover;
-    height: 400px; /* Adjust the height of the carousel*/
+    height: 600px; /* Adjust the height of the carousel*/
 }
 
 /* color for the carousel for the all images */ 
@@ -29,7 +29,7 @@
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-color: rgba(0, 0, 0, 0.5); /* color for the carousel background */
-    border-radius: 50%;
+    border-radius: 100%;
 }
 
 .carousel-caption h1, 
@@ -42,7 +42,8 @@
 .carousel-caption {
     
     text-align: center;     /* Align text to center */
-    color: #fff; 
+    /* color: #fff;  */
+    color: black;
     color: rgba(255, 255, 255, 0.5);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
