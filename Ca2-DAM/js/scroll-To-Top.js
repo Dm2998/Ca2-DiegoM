@@ -1,3 +1,6 @@
+// 
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const scrollButton = document.getElementById('scrollToTopBtn');
     const scrollThreshold = 300; // Pixels scrolled before button appears
