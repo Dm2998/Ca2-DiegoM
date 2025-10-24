@@ -70,13 +70,19 @@ window.onclick = function (event) {
 const allModules = {
     // You can use the data-year attributes from the HTML as keys
     'Year1': {
-        gpa: '3.08',
+        gpa: '2.98',
         title: 'First Year Modules',
         modules: [
             { name: 'Introduction to Programming', grade: 'B' },
             { name: 'Mathematics for Computing', grade: 'A' },
+            { name: 'Computer Networks I', grade: 'B' },
             { name: 'Foundations of IT', grade: 'B-' },
-            { name: 'Digital & Analog Electronics', grade: 'B-' },
+            { name: 'Interactive Media', grade: 'B-' },
+            { name: 'DataBases implementation', grade: 'A' },
+            { name: 'Architecture Computer Hardware', grade: 'B+' },
+            { name: 'Introduction to Web Development', grade: 'B' },
+            { name: 'Systems Interactive', grade: 'B+' },
+            { name: 'Networks & Switching implementation', grade: 'C' },
             // ... more year 1 modules
         ]
     },
@@ -85,34 +91,43 @@ const allModules = {
         title: 'Second Year Modules',
         modules: [
             { name: 'Advanced Programming', grade: 'B+' },
-            { name: 'Database Systems', grade: 'A' },
-            { name: 'Computer Networks I', grade: 'B' },
-            { name: 'Software Engineering', grade: 'B' },
+            { name: 'Database Systems Advanced', grade: 'A' },
+            { name: 'Computer Networks II', grade: 'B' },
+            { name: 'Applicied Machine Learning', grade: 'B+' },
+            { name: 'Data Analysis', grade: 'B+' },
+            { name: 'User Experience Design', grade: 'B+' },
             // ... more year 2 modules
         ]
     },
     'Year3': {
-        gpa: '2.96',
+        gpa: '2.93',
         title: 'Third Year Modules',
         modules: [
             { name: 'Server-side Web Development', grade: 'B+' },
             { name: 'Operating Systems', grade: 'C+' },
             { name: 'Cloud Service & Distributed Computing', grade: 'B' },
             { name: 'Big Data Technologies', grade: 'A' },
-            { name: 'Data Analysis', grade: 'B+' },
+            { name: 'Applicied Machine Learning', grade: 'B+' },
             { name: 'Advanced Routing & Switching', grade: 'C' },
+            { name: 'Project',                      grade: 'A' },
             { name: 'Internship Programme', grade: '30 Credits' }, // Special case for non-grade item
         ]
     },
     'Year4': {
-        gpa: '3.02',
+        gpa: '2.96',
         title: 'Final Year Modules',
         modules: [
             { name: 'Project', grade: 'B+' },
-            { name: 'Cyber Security & Forensics', grade: 'B+' },
+            { name: 'Cyber Security For Cloud and IoT', grade: 'B' },
             { name: 'AI & Machine Learning', grade: 'B+' },
-            { name: 'Enterprise Architecture', grade: 'B' },
-            // ... more year 4 modules
+            { name: 'Enterprise Performance Architecture', grade: 'B' },
+            { name: 'DevOps - Continuous Integration - Azure Pipeline', grade: 'B+' },
+            { name: 'IT Governance And Quality', grade: 'B' },
+            { name: 'Advanced Cloud Provisioning and Networks', grade: 'C' },
+            { name: 'Cloud Architecture AWS', grade: 'B+' },
+            { name: 'Private Cloud Architecture', grade: 'C' },
+            { name: 'Interactive Media Design & Visualization', grade: 'A' },
+            // ... more year 4 modules 
         ]
     }
 };
