@@ -18,3 +18,145 @@
 .col-md-7.scroll-element {
   transition-delay: 0.3s;
 }
+/* End Scroll Animation */
+
+
+
+
+/* Blue underline animation */
+
+
+
+  /* =======================================
+  CUSTOM CSS FOR PROFESSIONAL APPEARANCE
+   ======================================== */
+
+/* Header Styling */
+header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    background-color: #ffffff !important; /* Ensure a clean white background */
+    z-index: 1020; /* Keep it above other content */
+}
+
+/* Search Input Styling */
+.search-wrapper {
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    padding: 5px 15px;
+    transition: all 0.3s ease;
+}
+
+.search-input {
+    background-color: transparent !important;
+    padding-left: 0;
+    transition: width 0.3s ease;
+    width: 120px; /* Default width */
+}
+
+.search-input:focus {
+    width: 200px; /* Expanded width on focus */
+}
+
+.search-btn {
+    color: #495057;
+}
+
+/* Custom Hamburger Menu Styling */
+.custom-toggler:focus {
+    box-shadow: none;
+}
+
+.hamburger {
+    width: 25px;
+    height: 20px;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+.hamburger span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #343a40;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transition: all 0.25s ease-in-out;
+}
+
+.hamburger span:nth-child(1) { top: 0px; }
+.hamburger span:nth-child(2) { top: 8px; }
+.hamburger span:nth-child(3) { top: 16px; }
+
+.custom-toggler.active .hamburger span:nth-child(1) {
+    top: 8px;
+    transform: rotate(135deg);
+}
+
+.custom-toggler.active .hamburger span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+.custom-toggler.active .hamburger span:nth-child(3) {
+    top: 8px;
+    transform: rotate(-135deg);
+}
+
+/* Navigation Links Styling (Desktop/Open Menu) */
+.nav-link {
+    padding: 10px 15px !important;
+    color: #343a40 !important;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.nav-link:hover {
+    color: #007bff !important; /* Primary color on hover */
+    transform: translateY(-1px);
+}
+
+/* Underline effect on hover/active */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #007bff;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Nav Line for animation (mostly for mobile/open menu) */
+.nav-line {
+    display: none; /* Hide or style this based on desired effect */
+}
+
+/* Mobile Menu (list items fade in) */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: #f8f9fa;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        margin-top: 10px;
+        padding: 10px 0;
+    }
+    .nav-item {
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    }
+    .nav-item.fade {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

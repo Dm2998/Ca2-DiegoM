@@ -84,49 +84,74 @@
         </div>
     <br>  <!-- space between the top bar and the header -->
 
-    <!-- Header -->
-    <header class="bg-light py-3 sticky-top"> 
-        <div class="container d-flex align-items-center justify-content-between">
-            <!-- Search Modal -->
-            <div class="search-wrapper d-flex align-items-center ms-3">
-                <button class="btn search-btn" type="button">
-                  <i class="fa fa-search"></i>
+    <!-- Header with Navigation Bar -->
+     <header class="bg-light py-3 sticky-top"> 
+        <div class="container d-flex align-items-center justify-content-between flex-wrap">
+            
+            <!-- Logo/Home Link - Moved to the left for standard layout -->
+            <a href="#home" class="nav-link font-weight-bold text-uppercase p-0 me-3" style="font-size: 1.25rem;">Diego Alexander Medina</a>
+
+            <!-- Search Wrapper -->
+            <!-- <div class="search-wrapper d-flex align-items-center me-3 order-lg-3">
+                <button class="btn search-btn" type="button" id="searchExecuteBtn">
+                    <i class="fa fa-search"></i>
                 </button>
                 <input
-                  type="search"
-                  placeholder="Search"
-                  class="form-control border-0 shadow-none search-input"
-                  id="searchInput"
+                    type="search"
+                    placeholder="Search sections..."
+                    class="form-control border-0 shadow-none search-input"
+                    id="searchInput"
+                    aria-label="Search"
                 />
-            </div>
+            </div> -->
+
+            <!-- Search Notification (Hidden by default) -->
             <div id="searchNotification" 
-                class="alert alert-info position-fixed top-0 start-50 translate-middle-x d-none"
+                class="alert alert-primary position-fixed top-0 start-50 translate-middle-x d-none"
+                style="z-index: 1030; margin-top: 60px;"
                 role="alert">
-            Searching for: <span id="searchQuery"></span>
+                Searching for: <span id="searchQuery"></span>
             </div>
             
-            <!-- navigation navbar for the all sections -->
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
+            <!-- Navigation Menu -->
+            <nav class="navbar navbar-expand-lg navbar-light position-relative ms-auto order-lg-2">
+                <div class="nav-line"></div> 
+                
+                <!-- Toggler Button (Corrected to Bootstrap 5 attributes) -->
+                <button 
+                    class="navbar-toggler custom-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNav" 
+                    id="navToggleBtn"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item d-none d-lg-block"></li>
-                    </ul>
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a href="#home" class="nav-link font-weight-bold text-uppercase">Diego Medina</a>
-                        </li>
-                    </ul>
                     <ul class="navbar-nav ms-auto">
+                        <!-- Navigation Items -->
                         <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
                         <li class="nav-item"><a href="#Education" class="nav-link">Education</a></li>
                         <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
                         <li class="nav-item"><a href="#Experience" class="nav-link">Experiences</a></li>
                         <li class="nav-item"><a href="#Hobbies" class="nav-link">Hobbies</a></li>
                         <li class="nav-item">
-                            <button type="button" class="btn btn  nav-link text-black" data-bs-toggle="modal" data-bs-target="#contactModal">
+                            <!-- Contact Button (Styled as a distinct button) -->
+                            <button 
+                                type="button" 
+                                class="btn btn-muted nav-link text-primary ms-lg-2" 
+                                data-bs-toggle="modal" 
+                                data-bs-target="#contactModal"
+                                style="border-radius: 20px; padding: 5px 15px; border: none;"
+                            >
                                 Contact
                             </button>
                         </li>
@@ -135,6 +160,7 @@
             </nav>
         </div>
     </header>
+
     
     <!-- Contact Modal -->
     <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
